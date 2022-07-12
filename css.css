@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;600&family=Noto+Sans:ital,wght@0,200;0,400;1,500&display=swap');
+
+body{
+/*background: rgba(204, 198, 198, 0.9);*/
+background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+margin: 0;
+color: black;
+
+}
+/*HEADER*/
+.header::after{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    transition: all 1000ms;
+    
+}
+
+.header:hover::after{
+filter: blur(0px);
+-webkit-filter: blur(0px);
+}
+
+.header:hover .header-contenedor{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    }
+
+.header-contenedor{
+    position: absolute;/*para que el contenido este dentro del otro*/
+    z-index: 1;/*para q pase adelante*/
+    top: 10%;
+    left: 50%;/*para que ocupe la mitad de la pantalla*/
+    margin-top: 30px;
+    margin-left: -145px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 1000ms;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
+.title{
+    font-weight: 400;
+    font-size: 2rem;
+    color: #333;
+}
+
+.text{
+line-height: 1.7;
+margin-top: 1rem;
+}
+
+
+/*SERVICIOS*/
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+.grid-3{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.text-center{
+    text-align: center;
+    margin: auto;
+}
+
+.bg-light{
+    background:#fff;
+    color:#333;
+    }
+.bg-dark{
+    background: #2f3542;
+    color:#ffff;
+}
+.services{
+    padding: 2rem 0;
+    background: #fff;
+}
+.title-2{
+    color: #fff;
+    font-weight: 400;
+    font-size: 2rem;
+
+}
+.center-code1{
+    padding: 30px;
+
+}
+footer{
+    padding: 2.2rem;
+    background: #fff;
+}
+footer p{
+    margin: 0;
+}
+@media(max-width: 560px){
+    .header::after{
+        height: 50vh;
+    }
+    .header-contenedor{
+        top: 5%;
+        margin-top: 5px;
+    }
+    .logo{
+        height:140px;
+        width: 140px;
+    }
+    .header-contenedor .text{
+        display: none;
+    }
+    .grid-3, .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .services{
+        padding: 1rem 1rem;
+    }
+}
+@media(max-height:500px){
+    .header-contenedor .text{
+        display: none;
+    
+    }
+    .header-contenedor{
+        top:0;
+    }
+}
